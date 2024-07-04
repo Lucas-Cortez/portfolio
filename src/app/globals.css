@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply border-border box-border;
+    @apply box-border border-border;
     min-width: 0;
     font: inherit;
   }
@@ -96,4 +96,22 @@
 }
 
 @layer utilities {
+  .bg-application {
+    background-color: #000000;
+    background-image: linear-gradient(#303030 0.8px, transparent 0.8px),
+      linear-gradient(90deg, #303030 0.8px, transparent 0.8px);
+    background-size:
+      18px 18px,
+      18px 18px;
+    background-position:
+      -0.8px -0.8px,
+      -0.8px -0.8px;
+  }
+
+  .bg-application2 {
+    background-color: #000000;
+    background-image: linear-gradient(#e0e0e0 0.9px, transparent 0.9px),
+      linear-gradient(to right, #e0e0e0 0.9px, #ffffff 0.9px);
+    background-size: 18px 18px;
+  }
 }

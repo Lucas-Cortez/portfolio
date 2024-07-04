@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import "./globals.css";
 
 const roboto = Roboto({
-  weight: ["100", "300", "400", "500", "700"],
+  weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"],
   style: ["italic", "normal"],
   display: "swap",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${roboto.variable}`}>
+      <body className={`${roboto.variable} bg-application text-zinc-100`}>
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           {children}
         </ThemeProvider>
