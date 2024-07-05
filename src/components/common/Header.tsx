@@ -14,13 +14,19 @@ export function Header() {
         <h2 className="text-2xl">Next.js & React Developer</h2>
 
         <div className="flex gap-4">
-          <a href="https://x.com/Luck_cortez" target="_blank">
+          <a href="https://x.com/Luck_cortez" target="_blank" className="hover:text-zinc-50">
             <BsTwitterX className="h-5 w-5" />
           </a>
-          <a href="https://github.com/Lucas-Cortez" target="_blank">
+
+          <a href="https://github.com/Lucas-Cortez" target="_blank" className="hover:text-zinc-50">
             <FaGithub className="h-5 w-5" />
           </a>
-          <a href="https://www.linkedin.com/in/lucas-cortez-sanches" target="_blank">
+
+          <a
+            href="https://www.linkedin.com/in/lucas-cortez-sanches"
+            target="_blank"
+            className="hover:text-zinc-50"
+          >
             <FaLinkedin className="h-5 w-5" />
           </a>
         </div>

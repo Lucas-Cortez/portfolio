@@ -6,6 +6,7 @@ import { Header } from "@/components/common/Header";
 import { Separator } from "@/components/ui/separator";
 import { Navigation } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${roboto.variable} bg-application text-zinc-100`}>
+      <body className={`${roboto.variable} bg-application text-zinc-200`}>
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <main className="min-h-screen p-8">
             <div className="mx-auto flex max-w-3xl flex-col gap-6 rounded-lg bg-zinc-800/40 p-6 shadow-md shadow-black backdrop-blur-sm">
@@ -35,11 +36,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
               {children}
 
-              <Separator className="my-2 bg-zinc-400" />
+              <Separator className="my-2 bg-zinc-400 " />
 
               <Footer />
             </div>
           </main>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
