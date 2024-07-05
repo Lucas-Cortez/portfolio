@@ -1,11 +1,11 @@
 import { Animated } from "@/components/common/Animated";
 
-export default function Home() {
+export default function AboutPage() {
   return (
     <Animated>
       <section className="space-y-8">
         <div className="space-y-6">
-          <h2 className="text-xl font-medium hover:underline">Hey, there! I&apos;m Lucas Cortez 👋🏻</h2>
+          <h2 className="text-xl font-medium hover:underline">My journey 👜</h2>
 
           <p className="font-light">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor alias placeat ad soluta
@@ -20,18 +20,9 @@ export default function Home() {
         </div>
 
         <div className="space-y-6">
-          <h2 className="text-xl font-medium hover:underline">Technologies that i love to work with 💻</h2>
-          {/* 💻🛠️⚒️🧰⚙️ */}
+          <h2 className="text-xl font-medium hover:underline">Experience ⏳</h2>
 
-          <p>
-            - Lorem <br />
-            - Lorem <br />
-            - Lorem <br />
-            - Lorem <br />
-            - Lorem <br />
-            - Lorem <br />
-            - Lorem <br />
-          </p>
+          <p></p>
         </div>
       </section>
     </Animated>
