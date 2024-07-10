@@ -34,7 +34,13 @@ export default function ContactPage() {
                   <Label htmlFor="name">
                     Name <span className="text-red-600">*</span>
                   </Label>
-                  <Input name="name" id="name" className="bg-transparent" placeholder="Your name..." />
+                  <Input
+                    name="name"
+                    id="name"
+                    required
+                    className="bg-transparent"
+                    placeholder="Your name..."
+                  />
                 </div>
 
                 <div className="space-y-1">
@@ -44,6 +50,7 @@ export default function ContactPage() {
                   <Input
                     name="email"
                     id="email"
+                    required
                     className="bg-transparent"
                     placeholder="Your e-mail address..."
                   />
@@ -56,13 +63,18 @@ export default function ContactPage() {
                   <Textarea
                     id="message"
                     name="message"
+                    required
                     className="max-h-40 bg-transparent"
                     placeholder="Your message..."
                   />
                 </div>
               </div>
 
-              <Button variant={"secondary"} className="" type="submit">
+              <Button
+                variant={"secondary"}
+                className="bg-zinc-100 text-black hover:bg-zinc-100"
+                type="submit"
+              >
                 Submit
               </Button>
             </form>
