@@ -6,5 +6,5 @@
   "arrowParens": "always",
   "endOfLine": "lf",
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["clsx", "twMerge", "cn"]
+  "tailwindFunctions": ["clsx", "twMerge", "cn", "cva"]
 }

@@ -50,6 +50,7 @@ export default function ContactPage() {
                   <Input
                     name="email"
                     id="email"
+                    type="email"
                     required
                     className="bg-transparent"
                     placeholder="Your e-mail address..."

@@ -20,7 +20,7 @@ export function Navigation() {
         <Button
           size={"sm"}
           variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
+          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
           data-selected={isHome}
         >
           Home
@@ -30,7 +30,7 @@ export function Navigation() {
         <Button
           size={"sm"}
           variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
+          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
           data-selected={isAbout}
         >
           About
@@ -40,7 +40,7 @@ export function Navigation() {
         <Button
           size={"sm"}
           variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
+          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
           data-selected={isProjects}
         >
           Projects
@@ -50,7 +50,7 @@ export function Navigation() {
         <Button
           size={"sm"}
           variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
+          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
           data-selected={isContact}
         >
           Contact
@@ -60,7 +60,7 @@ export function Navigation() {
         <Button
           size={"sm"}
           variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
+          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black"
           data-selected={isLetsWorkTogether}
         >
           Let&apos;s work together 🎉
