@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export function Header() {
   return (
     <header className="flex gap-5">
-      <div className="relative aspect-square h-24 w-24 overflow-hidden rounded-lg border-[1px]">
+      <div className="relative aspect-square h-fit w-24 overflow-hidden rounded-lg border-[1px]">
         <Image src={ProfileImage} alt="profile picture" />
       </div>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import "./globals.css";
 import { Header } from "@/components/common/Header";
@@ -8,12 +8,18 @@ import { Navigation } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
-const roboto = Roboto({
-  weight: ["100", "300", "400", "500", "700", "900"],
+// const roboto = Roboto({
+//   weight: ["100", "300", "400", "500", "700", "900"],
+//   subsets: ["latin"],
+//   style: ["italic", "normal"],
+//   display: "swap",
+//   variable: "--font-roboto",
+// });
+
+const inter = Inter({
   subsets: ["latin"],
-  style: ["italic", "normal"],
   display: "swap",
-  variable: "--font-roboto",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +30,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${roboto.variable} bg-application text-zinc-200`}>
+      <body className={`${inter.className} bg-application text-zinc-200`}>
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <main className="min-h-screen p-8">
             <div className="mx-auto flex max-w-3xl flex-col gap-6 rounded-lg bg-zinc-800/40 p-6 shadow-md shadow-black backdrop-blur-sm">

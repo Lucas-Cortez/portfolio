@@ -14,6 +14,7 @@ import { GrMysql } from "react-icons/gr";
 import { SiMongodb } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa6";
 import { FaDocker } from "react-icons/fa";
+import Link from "next/link";
 
 const TECHNOLOGIES = [
   { label: "Javascript", icon: <JavascriptIcon className="mr-1 h-4 w-4" /> },
@@ -25,7 +26,7 @@ const TECHNOLOGIES = [
   { label: "Fastify", icon: <SiFastify className="mr-1 h-4 w-4" /> },
   { label: "NestJS", icon: <SiNestjs className="mr-1 h-4 w-4 fill-[#ea2856]" /> },
   { label: "PostgreSQL", icon: <BiLogoPostgresql className="mr-1 h-4 w-4 fill-sky-700" /> },
-  { label: "MySQL", icon: <GrMysql className="fill-sky-800-500 mr-1 h-4 w-4" /> },
+  { label: "MySQL", icon: <GrMysql className="mr-1 h-4 w-4 fill-sky-700" /> },
   { label: "MongoDB", icon: <SiMongodb className="mr-1 h-4 w-4 fill-green-600" /> },
   { label: "Git", icon: <FaGitAlt className="mr-1 h-4 w-4 fill-orange-600" /> },
   { label: "Docker", icon: <FaDocker className="mr-1 h-4 w-4 fill-blue-600" /> },
@@ -38,45 +39,40 @@ export default function Home() {
         <div className="space-y-6">
           <h2 className="text-xl font-medium hover:underline">Hey, there! I&apos;m Lucas Cortez 👋🏻</h2>
 
-          <p className="font-light">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor alias placeat ad soluta
-            eos sunt atque! Quia perspiciatis obcaecati optio alias accusantium! Earum facilis ipsam
-            repudiandae iure officiis blanditiis enim ullam dolor dolore quis, nostrum delectus quos deleniti
-            impedit magnam aliquam quod quo excepturi rerum consectetur cupiditate in neque. Iusto quasi iste
-            quas labore iure voluptas, cumque vel quaerat nam consequuntur voluptatum maiores. Fugit
-            architecto obcaecati quia fugiat quam dolor perferendis in odit sequi est! Quasi eveniet, impedit
-            aliquid quo at doloribus asperiores animi voluptatibus tenetur nisi esse, magni soluta dolor iusto
-            in excepturi inventore optio iure libero mollitia.
-          </p>
+          <div className="space-y-2 font-light">
+            <p>
+              Passionate about creative solutions and building applications from scratch, using both backend
+              and frontend technologies.
+            </p>
+            <p>
+              Specializing in creating dynamic and responsive web applications within the JavaScript
+              ecosystem, utilizing React, Next.js, and Node.js.
+            </p>
+            <p>
+              Currently working as a solo full-stack developer, helping others build great solutions, and
+              creating my own products.
+            </p>
+            <p>
+              If you need help turning your idea into a beautifully crafted web application,{" "}
+              <Link href={"/lets-work-together"}>
+                <span className="border-b hover:text-white">
+                  I&apos;m ready to bring your project to life.
+                </span>
+              </Link>
+            </p>
+          </div>
         </div>
 
         <div className="space-y-6">
           <h2 className="text-xl font-medium hover:underline">Technologies that i love to work with 💻</h2>
-          {/* 💻🛠️⚒️🧰⚙️ */}
 
           <div className="flex flex-wrap gap-2">
             {TECHNOLOGIES.map(({ label, icon }) => (
-              <Badge variant={"secondary"} className="p-1" key={label}>
+              <Badge className="border-zinc-500 bg-zinc-800 p-1 font-normal text-zinc-200" key={label}>
                 {icon}
                 {label}
               </Badge>
             ))}
-            {/* <Badge variant={"secondary"} className="p-1">
-              <JavascriptIcon className="mr-1 h-4 w-4" />
-              Javascript
-            </Badge>
-            <Badge variant={"secondary"}>Typescript</Badge>
-            <Badge variant={"secondary"}>React</Badge>
-            <Badge variant={"secondary"}>Next.js</Badge>
-            <Badge variant={"secondary"}>Node.js</Badge>
-            <Badge variant={"secondary"}>Express</Badge>
-            <Badge variant={"secondary"}>Fastify</Badge>
-            <Badge variant={"secondary"}>NestJS</Badge>
-            <Badge variant={"secondary"}>PostgreSQL</Badge>
-            <Badge variant={"secondary"}>MySQL</Badge>
-            <Badge variant={"secondary"}>MongoDB</Badge>
-            <Badge variant={"secondary"}>Git</Badge>
-            <Badge variant={"secondary"}>Docker</Badge> */}
           </div>
         </div>
       </section>
