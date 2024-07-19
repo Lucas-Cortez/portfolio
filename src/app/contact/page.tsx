@@ -1,3 +1,4 @@
+import { sendEmailAction } from "@/actions/sendEmail";
 import { Animated } from "@/components/common/Animated";
 import { CopyEmail } from "@/components/common/CopyEmail";
 import { Button } from "@/components/ui/button";
@@ -22,13 +23,7 @@ export default function ContactPage() {
           <h2 className="text-xl font-medium hover:underline">Send me a message</h2>
 
           <div>
-            <form
-              className="space-y-6"
-              action={async (formData) => {
-                "use server";
-                console.log(formData);
-              }}
-            >
+            <form className="space-y-6" action={sendEmailAction}>
               <div className="space-y-4">
                 <div className="space-y-1">
                   <Label htmlFor="name">

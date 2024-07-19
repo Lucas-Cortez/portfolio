@@ -4,4 +4,5 @@ export const envClientSchema = z.object({});
 
 export const envServerSchema = envClientSchema.extend({
   NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
+  RESEND_API_KEY: z.string(),
 });
