@@ -109,9 +109,9 @@
   }
 
   .bg-application2 {
-    background-color: #000000;
-    background-image: linear-gradient(#e0e0e0 0.9px, transparent 0.9px),
-      linear-gradient(to right, #e0e0e0 0.9px, #ffffff 0.9px);
-    background-size: 18px 18px;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: radial-gradient(#2b2b2b 1.05px, #000000 1.05px);
+    background-size: 21px 21px;
   }
 }

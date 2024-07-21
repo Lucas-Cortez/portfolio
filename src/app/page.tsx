@@ -53,11 +53,9 @@ export default function Home() {
               creating my own products.
             </p>
             <p>
-              If you need help turning your idea into a beautifully crafted web application,{" "}
+              If you need help turning your idea into a beautifully crafted web application, I&apos;m ready to{" "}
               <Link href={"/lets-work-together"}>
-                <span className="border-b hover:text-white">
-                  I&apos;m ready to bring your project to life.
-                </span>
+                <span className="border-b hover:text-white">bring your project to life.</span>
               </Link>
             </p>
           </div>
