@@ -10,7 +10,7 @@ export default function ProjectsPage() {
     <Animated>
       <section id="projects">
         <div className="space-y-6">
-          <h2 className="text-xl font-medium hover:underline">Projects 📁</h2>
+          <h2 className="text-xl font-semibold hover:underline">Projects 📁</h2>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {PROJECTS.map((project) => (

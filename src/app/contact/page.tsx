@@ -5,22 +5,23 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
+import { SendHorizonal } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <Animated>
-      <section className="space-y-8">
+      <section className="space-y-8" id="contact">
         <div className="space-y-6">
-          <h2 className="text-xl font-medium hover:underline">Social</h2>
+          <h2 className="text-xl font-semibold hover:underline">Social 👥</h2>
 
-          <p className="font-light">
+          <p className="text-zinc-400">
             You can send a message through my <span className="font-normal">social medias DM&apos;s</span> or
             to my e-mail <CopyEmail email="lucasc.sanches65@gmail.com" />.
           </p>
         </div>
 
         <div className="space-y-6">
-          <h2 className="text-xl font-medium hover:underline">Send me a message</h2>
+          <h2 className="text-xl font-semibold hover:underline">Send me a message 📫</h2>
 
           <div>
             <form className="space-y-6" action={sendEmailAction}>
@@ -72,6 +73,7 @@ export default function ContactPage() {
                 type="submit"
               >
                 Submit
+                <SendHorizonal className="ml-2 h-4 w-4" />
               </Button>
             </form>
           </div>

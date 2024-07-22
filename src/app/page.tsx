@@ -15,6 +15,8 @@ import { SiMongodb } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa6";
 import { FaDocker } from "react-icons/fa";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "lucide-react";
 
 const TECHNOLOGIES = [
   { label: "Javascript", icon: <JavascriptIcon className="mr-1 h-4 w-4" /> },
@@ -35,11 +37,11 @@ const TECHNOLOGIES = [
 export default function Home() {
   return (
     <Animated>
-      <section className="space-y-8">
+      <section className="space-y-8" id="home">
         <div className="space-y-6">
-          <h2 className="text-xl font-medium hover:underline">Hey, there! I&apos;m Lucas Cortez 👋🏻</h2>
+          <h2 className="text-xl font-semibold hover:underline">Hey, there! I&apos;m Lucas Cortez 👋🏻</h2>
 
-          <div className="space-y-2 font-light">
+          <div className="space-y-2 text-zinc-400">
             <p>
               Passionate about creative solutions and building applications from scratch, using both backend
               and frontend technologies.
@@ -55,14 +57,28 @@ export default function Home() {
             <p>
               If you need help turning your idea into a beautifully crafted web application, I&apos;m ready to{" "}
               <Link href={"/lets-work-together"}>
-                <span className="border-b hover:text-white">bring your project to life.</span>
+                <span className="border-b font-semibold text-zinc-100 hover:text-white">
+                  bring your project to life.
+                </span>
               </Link>
             </p>
           </div>
+
+          <a
+            href="https://cal.com/lucas-cortez-sanches/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-fit"
+          >
+            <Button variant={"secondary"} className="hover bg-zinc-100 text-black hover:bg-zinc-300">
+              Book a call
+              <Calendar className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
         </div>
 
         <div className="space-y-6">
-          <h2 className="text-xl font-medium hover:underline">Technologies that i love to work with 💻</h2>
+          <h2 className="text-xl font-medium hover:underline">Technologies I love to work with 💻</h2>
 
           <div className="flex flex-wrap gap-2">
             {TECHNOLOGIES.map(({ label, icon }) => (
