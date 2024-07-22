@@ -13,7 +13,7 @@ export function CopyEmail({ email }: CopyEmailProps) {
     navigator.clipboard.writeText(email);
     toast({
       title: "Email copied to clipboard ✨",
-      className: "text-zinc-100 border-none",
+      className: "bg-zinc-800 text-zinc-100 border-none",
     });
   };
 
