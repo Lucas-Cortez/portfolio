@@ -1,7 +1,7 @@
 "use client";
 
 import Cal, { getCalApi } from "@calcom/embed-react";
-import Script from "next/script";
+// import Script from "next/script";
 
 export default function WorkPage() {
   return (
@@ -9,6 +9,7 @@ export default function WorkPage() {
       {/* <p>Let&apos;s work together 🎉</p> */}
 
       <div className="overflow-hidden rounded-md">
+        {/* <Calendar /> */}
         <Cal
           namespace="30min"
           calLink="lucas-cortez-sanches/30min"
