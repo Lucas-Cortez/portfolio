@@ -2,8 +2,6 @@ import { Age } from "@/components/common/Age";
 import { Animated } from "@/components/common/Animated";
 import { Experience } from "@/components/common/Experience";
 
-const EXPERIENCE = [{}];
-
 export default function AboutPage() {
   return (
     <Animated>

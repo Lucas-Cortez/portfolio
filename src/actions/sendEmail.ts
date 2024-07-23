@@ -7,7 +7,7 @@ type FormState = {
   status: "success" | "error" | "idle";
 };
 
-export async function sendEmailAction(prevState: any, formData: FormData): Promise<FormState> {
+export async function sendEmailAction(_: any, formData: FormData): Promise<FormState> {
   try {
     const data = emailSchema.parse({
       name: formData.get("name"),
@@ -15,11 +15,6 @@ export async function sendEmailAction(prevState: any, formData: FormData): Promi
       message: formData.get("message"),
     });
 
-    // console.log("data:", data);
-
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
-
-    // throw new Error("test");
 
     const response = await resend.emails.send({
       from: `PORTFOLIO OFFER <portfolio@resend.dev>`,

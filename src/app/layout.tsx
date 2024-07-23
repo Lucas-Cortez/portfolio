@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import "./globals.css";
 import { Header } from "@/components/common/Header";
@@ -7,14 +7,6 @@ import { Separator } from "@/components/ui/separator";
 import { Navigation } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { Toaster } from "@/components/ui/toaster";
-
-// const roboto = Roboto({
-//   weight: ["100", "300", "400", "500", "700", "900"],
-//   subsets: ["latin"],
-//   style: ["italic", "normal"],
-//   display: "swap",
-//   variable: "--font-roboto",
-// });
 
 const inter = Inter({
   subsets: ["latin"],

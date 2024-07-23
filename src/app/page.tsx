@@ -1,5 +1,8 @@
+import Link from "next/link";
+
 import { Animated } from "@/components/common/Animated";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 import { JavascriptIcon } from "@/components/icons/JavascriptIcon";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -14,8 +17,6 @@ import { GrMysql } from "react-icons/gr";
 import { SiMongodb } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa6";
 import { FaDocker } from "react-icons/fa";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 
 const TECHNOLOGIES = [
