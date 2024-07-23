@@ -19,7 +19,7 @@ export function CopyEmail({ email }: CopyEmailProps) {
 
   return (
     <span
-      className="cursor-pointer font-normal text-zinc-300 underline underline-offset-2 hover:text-white"
+      className="cursor-pointer font-normal text-zinc-200 underline underline-offset-2 hover:text-white"
       onClick={copyEmail}
     >
       ({email})

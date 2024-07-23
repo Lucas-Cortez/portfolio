@@ -5,67 +5,54 @@ import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
+const TABS: Omit<TabProps, "selected">[] = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
+  { href: "/lets-work-together", label: "Let's work together 🎉" },
+];
+
 export function Navigation() {
   const path = usePathname();
 
-  const isHome = path === "/";
-  const isAbout = path === "/about";
-  const isProjects = path === "/projects";
-  const isContact = path === "/contact";
-  const isLetsWorkTogether = path === "/lets-work-together";
-
   return (
-    <nav className="flex flex-wrap gap-2">
-      <Link href={"/"}>
-        <Button
-          size={"sm"}
-          variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent  hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black data-[selected=true]:hover:no-underline"
-          data-selected={isHome}
-        >
-          Home
-        </Button>
-      </Link>
-      <Link href={"/about"}>
-        <Button
-          size={"sm"}
-          variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black data-[selected=true]:hover:no-underline"
-          data-selected={isAbout}
-        >
-          About
-        </Button>
-      </Link>
-      <Link href={"/projects"}>
-        <Button
-          size={"sm"}
-          variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black data-[selected=true]:hover:no-underline"
-          data-selected={isProjects}
-        >
-          Projects
-        </Button>
-      </Link>
-      <Link href={"/contact"}>
-        <Button
-          size={"sm"}
-          variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black data-[selected=true]:hover:no-underline"
-          data-selected={isContact}
-        >
-          Contact
-        </Button>
-      </Link>
-      <Link href={"/lets-work-together"}>
-        <Button
-          size={"sm"}
-          variant={"ghost"}
-          className="text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:bg-zinc-100 data-[selected=true]:text-black data-[selected=true]:hover:no-underline"
-          data-selected={isLetsWorkTogether}
-        >
-          Let&apos;s work together 🎉
-        </Button>
-      </Link>
+    <nav>
+      <ul className="relative flex flex-wrap gap-2">
+        {TABS.map((tab) => (
+          <Tab key={tab.href} {...tab} selected={tab.href === path} />
+        ))}
+      </ul>
     </nav>
+  );
+}
+
+interface TabProps {
+  selected: boolean;
+  href: string;
+  label: string;
+}
+
+export function Tab({ selected, href, label }: TabProps) {
+  return (
+    <li>
+      <Link href={href}>
+        <Button
+          size={"sm"}
+          variant={"ghost"}
+          className="relative text-zinc-300 hover:bg-transparent hover:text-zinc-100 hover:underline data-[selected=true]:text-black data-[selected=true]:hover:no-underline"
+          data-selected={selected}
+        >
+          {label}
+          {selected && (
+            <motion.span
+              layoutId="pill-tab"
+              transition={{ type: "spring", duration: 0.5 }}
+              className="absolute inset-0 -z-10 rounded-md bg-zinc-100"
+            ></motion.span>
+          )}
+        </Button>
+      </Link>
+    </li>
   );
 }

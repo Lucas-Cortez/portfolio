@@ -43,21 +43,24 @@ export default function Home() {
 
           <div className="space-y-2 text-zinc-400">
             <p>
-              Passionate about creative solutions and building applications from scratch, using both backend
-              and frontend technologies.
+              Passionate about creative solutions and{" "}
+              <span className="font-semibold text-zinc-200">building applications from scratch</span>, using
+              both backend and frontend technologies.
             </p>
             <p>
               Specializing in creating dynamic and responsive web applications within the JavaScript
-              ecosystem, utilizing React, Next.js, and Node.js.
+              ecosystem, utilizing{" "}
+              <span className="font-semibold text-zinc-200">React, Next.js, and Node.js.</span>
             </p>
             <p>
-              Currently working as a solo full-stack developer, helping others build great solutions, and
-              creating my own products.
+              Currently working as a solo{" "}
+              <span className="font-semibold text-zinc-200">Full-Stack developer</span>, helping others build
+              great solutions, and creating my own products.
             </p>
             <p>
               If you need help turning your idea into a beautifully crafted web application, I&apos;m ready to{" "}
               <Link href={"/lets-work-together"}>
-                <span className="border-b font-semibold text-zinc-100 hover:text-white">
+                <span className="border-b font-semibold text-zinc-200 hover:text-white">
                   bring your project to life.
                 </span>
               </Link>
